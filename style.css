@@ -1,0 +1,9 @@
+
+body { background-color: #2e97a7; }
+.center { display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: "1000px"}
+footer {background-color: whitesmoke;
+    color: black;
+    text-align: center;}
