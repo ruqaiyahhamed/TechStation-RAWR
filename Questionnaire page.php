@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questionnaire page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/688542b3bf.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     
+    <link href="style.css" rel="stylesheet">
+    <script src="function ValidationForm() {.js"></script>
+    <style>
+     
+        .centerimage{display: block;
+            margin-left: auto;
+            margin-right: auto;}
+
+    </style>
+
+</head>
+
+<body>
+   
+    <div class="container-fluid"></div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- logo -->
+   
+        <a class="navbar-brand" href="#">
+        <img src="TECH STATION.png" alt="tech station logo" style="width:40px;"> TECH STATION
+        </a>
+    </div>
+
+    <!-- menu -->
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav">
+        <!-- home -->
+        <li class="nav-item">
+      
+            <i class="fa-solid fa-house fa-xl" style="color: #1aacac;"></i></br>
+            <a class="nav-link" href="index.html">Home</a>
+         
+        </li>
+        <!-- about us -->
+        <li class="nav-item">
+            <i class="fa-solid fa-people-group fa-xl" style="color: #1aacac;"></i>
+           
+            <a class="nav-link" href="About Us.html"> About Us </a>
+        </li>
+
+        <!-- registration -->
+        <li class="nav-item dropdown">
+            <i class="fa-solid fa-address-card fa-xl" style="color: #1aacac;"></i>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Registraion</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Registration.code.html">Registration page</a></li>
+                    <hr/>
+                    <li><a class="dropdown-item" href="student regis.html">Student</a></li>
+                    
+                    <li><a class="dropdown-item" href="driverregis.html">Driver</a></li>
+
+            </ul>
+        </li>
+
+        <!-- waiting page -->
+        <li class="nav-item dropdown">
+            <i class="fa-solid fa-stopwatch fa-xl" style="color: #1aacac;"></i>
+            <a class="nav-link dropdown-toggle" href="WaitingList.html" role="button" data-bs-toggle="dropdown">Waiting Page</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="WaitingList.html">WaitingList Page</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="DriverWait.html">Driver</a></li>
+                <li><a class="dropdown-item" href="StudentWait.html">Student</a></li>
+            </ul>
+        </li>
+
+        <!-- station page -->
+        <li class="nav-item">
+            <i class="fa-solid fa-van-shuttle fa-fade fa-xl" style="color: #1aacac;"></i>
+          <a class="nav-link" href="staionPage.html">Station Page</a>
+        </li>  
+
+        <!-- driver page -->
+        <li class="nav-item">
+            <i class="fa-solid fa-user-tie fa-xl" style="color: #1aacac;"></i>
+            <a class="nav-link" href="Driver Page.html">Driver Page</a>
+        </li> 
+        
+        <!-- Questionnaire page -->
+        <li class="nav-item">
+            <i class="fa-regular fa-comments  fa-xl" style="color: #1aacac;"></i>
+            <a class="nav-link" href="Questionnaire page.php">Questionnaire page</a>
+        </li>  
+        
+        
+            <!-- funpage-->
+            <li class="nav-item">
+                <i class="fa-solid fa-gamepad fa-xl" style="color: #1aacac;"></i>
+                <a class="nav-link" href="funpage.html">funpage</a>
+            </li> 
+        </ul>
+    </div>
+    </nav>
+
+    <br/><br/>
+    <h1 style="color: white; text-align: center;"><strong> Questionnaire page </strong></h1>
+    <br/><br/>
+
+    <form name="RegForm" action="" onsubmit="return ValidationForm()" method="POST"
+        style="color: black; background-color: white;">
+        <br/><br/>
+
+        <div class="container">
+          <label for="name"><b>name</b></label></br>
+          <input type="text" placeholder="Enter Name " name="name" required id="name">
+        <p></p>
+    
+        <label for="email"><b>Email: </b></label></br>
+        <input type="email" placeholder="Enter Email" name="email" id="email">
+      <p></p>
+
+      <label for="password"><b>Password: </b></label></br>
+      <input type="password" placeholder="Enter password" name="password" id="password">
+      <p></p>
+
+      <label for="gender"><b>Gender:</b></label> </br>
+      <label><input type="radio" name="gender" > Female </label>
+      <label><input type="radio" name="gender"> Male </label>
+      <p></p>
+
+          <p>Write your Feedback/suggestions</p>
+      <textarea name = "Feedback" rows = "10" cols = "100" id="feedback">
+        </textarea>
+       
+          <p></p>
+          <button type="submit">Send</button>
+          
+        </div>
+        <br/><br/>
+    </form>
+    </p>
+    
+    
+    <h1 style="color: white; text-align: center;"><strong> You can also find us on </strong></h1>
+        <img src="email.png" class = "centerimage" style="width:50px" >
+        <img src="call.webp" class = "centerimage" style="width:50px">
+
+
+
+    
+    <!-- ========== start PHP CODE ========== -->
+    
+
+    <?php
+
+        class questionnare{
+            public $name;
+            public $feedback;
+
+            function __construct($name, $review){
+                $this->name = $name;
+                $this->review = $review;
+            }
+
+            function setName($name) {$this->name = $name;}
+            function setReview($review) {$this->review = $review;}
+            function getName(){ return $this->name;}
+            function getReview(){return $this->review;}
+        }
+
+    
+        $TSreviews = array ("Asma" => "A great website that will benefit university students",
+                            "Razan" => "Helps students and saves time",
+                            "Omar" => "Now drivers to not pass by each station to check the availability of students",
+                            "Fatma" => "I can order a bus at any time");
+     
+        function display(){
+    
+            global $TSreviews;
+            
+            echo "<table cellpadding='50px' style='margin: 50px;'>
+            <tr>
+            <th>Student name</th> 
+            <th>Review</th>
+            </tr>";
+
+            foreach($TSreviews as $key => $value){
+            echo "<tr>";
+            echo "<td> $key </td>";
+            echo "<td> $value </td>";
+            echo "<tr>";
+            }
+            echo "</table> <br>";
+            }
+
+            if (isset($_POST['submit'])) {
+                $nn = $_POST['name'];
+                $ff = $_POST['Feedback'];
+                
+                echo "<tr>";
+                echo "<td> $nn </td>";
+                echo "<td> $ff </td>";
+                echo "<tr>";
+            }
+    
+            display();
+        ?>
+
+
+        <!-- ========== end PHP CODE ========== -->
+
+
+    </body>
+
+<footer>
+    RAWR
+</footer>
+</html>
